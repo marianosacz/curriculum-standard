@@ -1,0 +1,170 @@
+.cv-container {
+    font-family: Arial, sans-serif;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.88); /* Opacidad del 80% (0.8) */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .cv-container header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .cv-container h1 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 10%;
+    margin-top: -15%;
+  }
+  
+  .cv-container h2 {
+    font-size: 20px;
+    color: #666;
+    margin-bottom: 10px;
+  }
+  
+  .cv-container p {
+    font-size: 16px;
+    color: #777;
+    margin-bottom: 10px;
+    text-align: left;
+  }
+  
+  .cv-container section {
+    margin-bottom: 20px;
+  }
+  
+  .cv-container h2 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .cv-container ul {
+    list-style-type: disc;
+    margin-left: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .cv-container li {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 5px;
+  }
+  
+.cv-container img {
+  border-radius: 1%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  margin-left: -80%
+}
+  
+  /* Estilos globales */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.cv-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Estilos del encabezado */
+header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: 28px;
+  margin-top: 10px;
+}
+
+h2 {
+  font-size: 20px;
+  margin: 10px 0;
+}
+
+p {
+  margin-bottom: 10px;
+}
+
+img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+
+/* Estilos de las secciones */
+section {
+  margin-bottom: 30px;
+}
+
+h2 {
+  font-size: 24px;
+  margin: 10px 0;
+}
+
+ul {
+  list-style-type: disc;
+  margin-left: 20px;
+  margin-bottom: 10px;
+}
+
+li {
+  margin-bottom: 5px;
+}
+
+/* Estilos del botón de descarga */
+button {
+  margin-left:80%;
+  margin-top:-10%;
+  padding: 7px 15px;
+  font-size: 14px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Estilos del enlace de descarga */
+a.download-link {
+  color: #007bff;
+  text-decoration: none;
+}
+
+a.download-link:hover {
+  text-decoration: underline;
+}
+
+.cv-container {
+  border: 1px solid black;
+  padding: 20px; /* Opcional: Agrega un espacio interno al contenido */
+  font-family: "Arial", sans-serif;
+}
+
+.cv-container hr {
+  border: none;
+  border-top: 1px solid #ccc;
+  margin: 20px 0;
+}
+
+body {
+  background-image: url('assets/fondo.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.button-container {
+  text-align: center;
+  margin-top: 20px;
+}
