@@ -8,8 +8,13 @@ import html2canvas from 'html2canvas';
   styleUrls: ['./curriculum-standard.component.css']
 })
 export class CurriculumStandardComponent {
-
-  generarPDF() {
+  constructor() {
+    this.generatePDF = this.generatePDF.bind(this);
+  }
+  
+  
+  generatePDF = () => {
+    console.log("entra en la funcion");
     const options = { background: 'white', scale: 3 };
     const content = document.getElementById('cv-container');
 

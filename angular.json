@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "curriculum-portable": {
+    "curriculum-curriculum-standard": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/curriculum-portable",
+            "outputPath": "dist/curriculum-curriculum-standard",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -61,10 +61,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "curriculum-portable:build:production"
+              "browserTarget": "curriculum-curriculum-standard:build:production"
             },
             "development": {
-              "browserTarget": "curriculum-portable:build:development"
+              "browserTarget": "curriculum-curriculum-standard:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -72,7 +72,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "curriculum-portable:build"
+            "browserTarget": "curriculum-curriculum-standard:build"
           }
         },
         "test": {
