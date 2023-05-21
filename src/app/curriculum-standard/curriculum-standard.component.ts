@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import jsPDF from 'jspdf';
-
+import html2canvas from 'html2canvas';
 
 @Component({
   selector: 'app-curriculum-standard',
@@ -8,20 +8,24 @@ import jsPDF from 'jspdf';
   styleUrls: ['./curriculum-standard.component.css']
 })
 export class CurriculumStandardComponent {
-  
-  constructor() {
-    this.downloadPDF();
-  }
-  
-  public downloadPDF(): void {
-    const doc = new jsPDF();
-    
-    // Agrega contenido al PDF
-    doc.text('Mi currículum', 10, 10);
-    // Agrega más contenido según tu estructura de currículum
-    
-    // Descarga el PDF
-    doc.save('curriculum.pdf');
-  }
 
+  generarPDF() {
+    const options = { background: 'white', scale: 3 };
+    const content = document.getElementById('cv-container');
+
+    if (content) {
+      html2canvas(content, options).then((canvas) => {
+        const imgData = canvas.toDataURL('image/png');
+        const pdf = new jsPDF('p', 'mm', 'a4');
+        const imgProps = pdf.getImageProperties(imgData);
+        const width = pdf.internal.pageSize.getWidth();
+        const height = (imgProps.height * width) / imgProps.width;
+
+        pdf.addImage(imgData, 'PNG', 0, 0, width, height);
+        pdf.save('curriculum.pdf');
+      });
+    } else {
+      console.error('Elemento no encontrado');
+    }
+  }
 }
