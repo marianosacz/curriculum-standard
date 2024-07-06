@@ -1,67 +1,7 @@
-.cv-container {
-    font-family: Arial, sans-serif;
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: rgba(255, 255, 255, 0.88); /* Opacidad del 80% (0.8) */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-  
-  .cv-container header {
-    text-align: center;
-    margin-bottom: 20px;
-  }
-  
-  .cv-container h1 {
-    font-size: 28px;
-    color: #333;
-    margin-bottom: 10%;
-    margin-top: -15%;
-  }
-  
-  .cv-container h2 {
-    font-size: 20px;
-    color: #666;
-    margin-bottom: 10px;
-  }
-  
-  .cv-container p {
-    font-size: 16px;
-    color: #777;
-    margin-bottom: 10px;
-    text-align: left;
-  }
-  
-  .cv-container section {
-    margin-bottom: 20px;
-  }
-  
-  .cv-container h2 {
-    font-size: 20px;
-    color: #333;
-    margin-bottom: 10px;
-  }
-  
-  .cv-container ul {
-    list-style-type: disc;
-    margin-left: 20px;
-    margin-bottom: 10px;
-  }
-  
-  .cv-container li {
-    font-size: 16px;
-    color: #555;
-    margin-bottom: 5px;
-  }
-  
-.cv-container img {
-  border-radius: 1%;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  margin-left: -80%
-}
-  
-  /* Estilos globales */
 body {
+  background-image: url('assets/fondo.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
@@ -71,85 +11,87 @@ body {
   max-width: 800px;
   margin: 0 auto;
   padding: 20px;
+  background-color: rgba(255, 255, 255, 0.88);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border: 1px solid #ddd;
+  border-radius: 10px;
 }
 
-/* Estilos del encabezado */
-header {
+.cv-container header {
   text-align: center;
   margin-bottom: 20px;
 }
 
-h1 {
-  font-size: 28px;
-  margin-top: 10px;
+.cv-container .profile-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-h2 {
-  font-size: 20px;
-  margin: 10px 0;
-}
-
-p {
-  margin-bottom: 10px;
-}
-
-img {
+.cv-container .profile-picture {
   width: 150px;
   height: 150px;
   border-radius: 50%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  margin-bottom: 15px;
+  object-fit: cover;
 }
 
-/* Estilos de las secciones */
-section {
-  margin-bottom: 30px;
-}
-
-h2 {
-  font-size: 24px;
-  margin: 10px 0;
-}
-
-ul {
-  list-style-type: disc;
-  margin-left: 20px;
+.cv-container h1 {
+  font-size: 28px;
+  color: #333;
   margin-bottom: 10px;
 }
 
-li {
-  margin-bottom: 5px;
+.contact-info {
+  text-align: left;
+  margin-top: 10px;
 }
 
-/* Estilos del botón de descarga */
-button {
-  margin-left:80%;
-  margin-top:-10%;
-  padding: 7px 15px;
-  font-size: 14px;
-  background-color: #007bff;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
+.contact-info span,
+.contact-info i,
+.contact-info a {
+  display: flex;
+  align-items: center;
+  color: #555;
+  font-size: 16px;
+  margin: 5px 0;
 }
 
-button:hover {
-  background-color: #0056b3;
-}
-
-/* Estilos del enlace de descarga */
-a.download-link {
-  color: #007bff;
+.contact-info a {
+  color: #555; /* Cambiar color del enlace del correo electrónico a gris */
   text-decoration: none;
 }
 
-a.download-link:hover {
+.contact-info a:hover {
   text-decoration: underline;
 }
 
-.cv-container {
-  border: 1px solid black;
-  padding: 20px; /* Opcional: Agrega un espacio interno al contenido */
-  font-family: "Arial", sans-serif;
+.contact-info .material-icons,
+.contact-info .fa,
+.contact-info .fa-brands {
+  margin-right: 10px; /* Espacio entre los iconos y los datos */
+}
+
+.contact-info span i {
+  margin-right: 10px; /* Espacio entre los iconos y los datos en span */
+}
+
+/* Añadir colores a los iconos */
+.contact-info .fa-map-marker-alt {
+  color: #DB4437; /* Rojo Google */
+}
+
+.contact-info .fa-whatsapp {
+  color: #25D366; /* Verde WhatsApp */
+}
+
+.contact-info .fa-envelope {
+  color: #7a7878; /* Rojo Gmail */
+}
+
+.contact-info .fa-linkedin {
+  color: #1E88E5; /* Azul LinkedIn */
 }
 
 .cv-container hr {
@@ -158,13 +100,20 @@ a.download-link:hover {
   margin: 20px 0;
 }
 
-body {
-  background-image: url('assets/fondo.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-}
+@media screen and (max-width: 600px) {
+  .cv-container {
+    padding: 10px;
+  }
 
-.button-container {
-  text-align: center;
-  margin-top: 20px;
+  .cv-container h1 {
+    font-size: 24px;
+  }
+
+  .cv-container h2 {
+    font-size: 20px;
+  }
+
+  .cv-container p, .cv-container li {
+    font-size: 14px;
+  }
 }
