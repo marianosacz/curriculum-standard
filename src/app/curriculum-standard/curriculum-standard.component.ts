@@ -1,7 +1,5 @@
 import { Component } from '@angular/core';
 
-declare var html2pdf: any; // Declarar la biblioteca para que TypeScript la reconozca
-
 @Component({
   selector: 'app-curriculum-standard',
   templateUrl: './curriculum-standard.component.html',
@@ -9,17 +7,14 @@ declare var html2pdf: any; // Declarar la biblioteca para que TypeScript la reco
 })
 export class CurriculumStandardComponent {
 
-  // Implementar la función para descargar el PDF
-  downloadPDF() {
-    const element = document.getElementById('cv');
-    const options = {
-      margin:       0,
-      filename:     'curriculum_vitae.pdf',
-      image:        { type: 'jpeg', quality: 0.98 },
-      html2canvas:  { scale: 2 },
-      jsPDF:        { unit: 'in', format: 'letter', orientation: 'portrait' }
-    };
-
-    html2pdf().from(element).set(options).save();
+  // Método para copiar el correo electrónico al portapapeles
+  copyEmailToClipboard(event: Event): void {
+    event.preventDefault(); // Previene la acción predeterminada del enlace
+    const email = 'mariano.saczkowski@gmail.com';
+    navigator.clipboard.writeText(email).then(() => {
+      alert('Correo copiado al portapapeles');
+    }).catch(err => {
+      console.error('Error al copiar el correo: ', err);
+    });
   }
 }
